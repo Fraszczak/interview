@@ -30,8 +30,6 @@ calculatePayment(credit: CreditRequest): CreditResponse
 `CreditResponse` powinien zawierać:
 
 - `monthlyPayment: number` - miesięczna rata
-- `totalAmount: number` - całkowita kwota do spłaty (opcjonalnie)
-- `interest: number` - całkowite odsetki (opcjonalnie)
 
 **Logika obliczania:**
 
@@ -43,7 +41,18 @@ calculatePayment(credit: CreditRequest): CreditResponse
 - Wstrzyknij serwis do komponentu przez constructor (Dependency Injection)
 - Zastąp prostą logikę obliczania w komponencie wywołaniem metody serwisu
 
+## Testy jednostkowe
+
+Napisz testy jednostkowe dla serwisu `CreditService`:
+
+- Test tworzenia serwisu
+- Test obliczania raty dla różnych typów kredytów (personal, mortgage, car)
+- Test z różnymi wartościami kwoty i okresu
+- Test zaokrąglania wyniku do 2 miejsc po przecinku
+- Użyj Vitest (już skonfigurowany w projekcie)
+
 ## Uwagi
 
 - Serwis powinien być niezależny od komponentu (może być używany w wielu miejscach)
 - Logika obliczania powinna być w serwisie, nie w komponencie
+- Testy powinny pokrywać różne scenariusze użycia serwisu

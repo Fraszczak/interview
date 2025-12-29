@@ -24,6 +24,14 @@ Stwórz komponent formularza, który pozwoli użytkownikowi wprowadzić dane kre
 - Po kliknięciu przycisku wyświetl obliczoną miesięczną ratę
 - Prosty wzór: `rata = kwota / okres`
 
+**Walidacja:**
+
+- Kwota kredytu: wymagana, minimum 1000 PLN, maksimum 500000 PLN
+- Okres spłaty: wymagany, minimum 6 miesięcy, maksimum 360 miesięcy
+- Typ kredytu: wymagany
+- Wyświetlaj komunikaty błędów walidacji przy każdym polu
+- Przycisk "Oblicz ratę" powinien być zablokowany gdy formularz jest nieprawidłowy
+
 **Wyświetlanie wyniku:**
 
 - Pokaż obliczoną miesięczną ratę po kliknięciu przycisku
@@ -48,6 +56,6 @@ Po kliknięciu "Oblicz ratę" powinna wyświetlić się rata: **1666.67 PLN**
 
 ## Uwagi
 
-- Nie musisz implementować walidacji
-- Skup się na działającym formularzu i wyświetlaniu wyniku
+- Walidacja jest wymagana - użyj wbudowanych validators Angular (min, max, required)
+- Skup się na działającym formularzu z walidacją i wyświetlaniu wyniku
 - Możesz użyć prostego stylowania lub pozostawić domyślne
